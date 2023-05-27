@@ -11,7 +11,10 @@ module.exports = {
   mode: 'jit',
   theme: {
     extend: {
-
+      colors: {
+        'sage-green' : '#8FC0A9',
+        'pretty-blue' : '#68B0AB'
+      },
     },
   },
   variants: {},

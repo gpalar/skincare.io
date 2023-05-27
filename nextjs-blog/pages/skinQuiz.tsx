@@ -30,6 +30,10 @@ export default function skinQuiz() {
                     </div>
                 </div>
 
+                <h2>
+                    <Link href="/resultsPage">Next</Link>
+                </h2>
+
                 <style jsx global>{`
                 html,
                 body {
@@ -44,6 +48,7 @@ export default function skinQuiz() {
                 }
             `}</style>
             </div>
+
         </>
 
     );
