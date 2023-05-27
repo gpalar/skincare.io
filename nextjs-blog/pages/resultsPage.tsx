@@ -1,16 +1,21 @@
 import * as React from 'react';
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, HomeIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Skincare.io', href: '/', current: false },
+  { name: 'Skincare.io', href: '#', current: false }
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+const iconRightStyle = {
+    marginLeft: 'auto',
+};
+
+// export default function Example() {
+function NavBar() {
   return (
     <Disclosure as="nav" className="bg-sage-green">
       {({ open }) => (
@@ -19,7 +24,7 @@ export default function Example() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -28,30 +33,33 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start w-full">
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
                     src="/sparkle-logo.png"
-                    alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:ml-4 sm:block">
+                  <div className="flex items-center justify-end space-x-5">   
                     {navigation.map((item) => (
-                      <a
+                        <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                        //   item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          item.current ? 'bg-sage-green text-white' : 'bg-sage-green text-white',
-                          'rounded-md px-3 py-2 text-xl font-medium font-sans'
+                            item.current ? 'bg-sage-green text-white' : 'text-white hover:bg-gray hover:text-white',
+                            'rounded-md px-3 py-2 text-xl font-medium font-sans'
                         )}
                         aria-current={item.current ? 'page' : undefined}
-                      >
+                        >
                         {item.name}
-                      </a>
+                        </a>
                     ))}
+                    
+                    {/* <a href="#" className="text-white hover:bg-sage-green-700 hover:text-white rounded-md p-2">
+                        <HomeIcon className="h-6 w-6" style={iconRightStyle} aria-hidden="true" />
+                    </a> */}
+
                   </div>
                 </div>
               </div>
@@ -86,177 +94,75 @@ export default function Example() {
 }
 
 
+function Sidebar() {
+  return (
+    <div className="bg-pretty-blue py-10 px-10">
+    {/* // <div className="bg-pretty-blue h-full"> */}
+      <ul className="flex flex-col">
+        <li className="mb-4">
+          <a
+            className="text-gray-200 hover:text-white hover:underline"
+            href="#"
+          >
+            Cleanser
+          </a>
+        </li>
+        <li className="mb-4">
+          <a
+            className="text-gray-200 hover:text-white hover:underline"
+            href="#"
+          >
+            Toner
+          </a>
+        </li>
+        <li className="mb-4">
+          <a
+            className="text-gray-200 hover:text-white hover:underline"
+            href="#"
+          >
+            Serum
+          </a>
+        </li>
+        <li className="mb-4">
+          <a
+            className="text-gray-200 hover:text-white hover:underline"
+            href="#"
+          >
+            Moisturizer
+          </a>
+        </li>
+        <li>
+          <a
+            className="text-gray-200 hover:text-white hover:underline"
+            href="#"
+          >
+            Sunscreen
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+}
 
-// import React from "react";
+function App() {
+  return (
+    // <div className="flex">
+    //   <Sidebar />
+    //   <div className="flex flex-col flex-1">
+    //     <NavBar />
+    //     {/* Add other components and content here */}
+    //   </div>
+    // </div>
+    <div>
+      <NavBar />
+      <div className="flex flex-col flex-1">
+        <Sidebar />
+      </div>
+    </div>
+  );
+}
 
-// function NavBar() {
-//   return (
-//     <nav className="bg-white shadow">
-//       <div className="container mx-auto px-6 py-3">
-//         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-//           <div className="flex justify-between items-center">
-//             <div className="flex items-center">
-//               <a
-//                 className="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300"
-//                 href="#"
-//               >
-//                 Skincare.io
-//               </a>
-//               <div className="md:hidden">
-//                 <button
-//                   type="button"
-//                   className="block text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-100 focus:text-gray-700 dark:focus:text-gray-100 focus:outline-none"
-//                 >
-//                 </button>
-//               </div>
-//             </div>
-//             <div className="hidden md:block">
-//               <ul className="flex ml-4">
-//                 <li className="mr-3">
-//                   <a
-//                     className="text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-100 px-2 py-1"
-//                     href="#"
-//                   >
-//                     Home
-//                   </a>
-//                 </li>
-//                 <li className="mr-3">
-//                   <a
-//                     className="text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-100 px-2 py-1"
-//                     href="#"
-//                   >
-//                     About
-//                   </a>
-//                 </li>
-//                 <li className="mr-3">
-//                   <a
-//                     className="text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-100 px-2 py-1"
-//                     href="#"
-//                   >
-//                     Services
-//                   </a>
-//                 </li>
-//                 <li className="mr-3">
-//                   <a
-//                     className="text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-100 px-2 py-1"
-//                     href="#"
-//                   >
-//                     Contact
-//                   </a>
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//           <div className="flex items-center mt-3 md:mt-0">
-//             <button
-//               className="hidden md:block text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-100 mr-3"
-//               aria-label="Show notifications"
-//             >
-//               <svg
-//                 className="w-6 h-6 fill-current"
-//                 viewBox="0 0 24 24"
-//                 xmlns="http://www.w3.org/2000/svg"
-//               >
-//                 <path
-//                   className="heroicon-ui"
-//                   d="M11 21H6a2 2 0 0 1-2-2v-7a5 5 0 0 1 4-4.9V7a7 7 0 0 1 14 0v2.1a5 5 0 0 1 4 4.9v7a2 2 0 0 1-2 2h-5m-1 0h-4"
-//                 />
-//               </svg>
-//             </button>
-
-//             <div className="flex sm:items-center">
-//               <div className="relative">
-//                 <button
-//                   className="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out"
-//                   id="user-menu"
-//                   aria-label="User menu"
-//                   aria-haspopup="true"
-//                 >
-//                   <img
-//                     className="h-8 w-8 rounded-full"
-//                     src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
-//                     alt="user profile"
-//                   />
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-// function Sidebar() {
-//   return (
-//     <div className="bg-pretty-blue py-4 px-2">
-//       <ul className="flex flex-col">
-//         <li className="mb-4">
-//           <a
-//             className="text-gray-200 hover:text-white hover:underline"
-//             href="#"
-//           >
-//             Dashboard
-//           </a>
-//         </li>
-//         <li className="mb-4">
-//           <a
-//             className="text-gray-200 hover:text-white hover:underline"
-//             href="#"
-//           >
-//             Projects
-//           </a>
-//         </li>
-//         <li className="mb-4">
-//           <a
-//             className="text-gray-200 hover:text-white hover:underline"
-//             href="#"
-//           >
-//             Reports
-//           </a>
-//         </li>
-//         <li className="mb-4">
-//           <a
-//             className="text-gray-200 hover:text-white hover:underline"
-//             href="#"
-//           >
-//             Calendar
-//           </a>
-//         </li>
-//         <li className="mb-4">
-//           <a
-//             className="text-gray-200 hover:text-white hover:underline"
-//             href="#"
-//           >
-//             Team
-//           </a>
-//         </li>
-//         <li>
-//           <a
-//             className="text-gray-200 hover:text-white hover:underline"
-//             href="#"
-//           >
-//             Documents
-//           </a>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <div className="flex">
-//       <Sidebar />
-//       <div className="flex flex-col flex-1">
-//         <NavBar />
-//         {/* Add other components and content here */}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
+export default App;
 
               
 
