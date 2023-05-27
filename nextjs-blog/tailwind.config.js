@@ -19,8 +19,10 @@ module.exports = {
         'light-medium-purple': '#b8c0ff',
         'dark-purple': '#c8b6ff',
         'light-light-purple': '#e7c6ff',
+        'sage-green': '#8FC0A9',
+        'pretty-blue': '#68B0AB'
       },
-    }
+    },
   },
   variants: {},
   plugins: [],

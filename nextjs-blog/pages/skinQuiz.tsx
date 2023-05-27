@@ -84,6 +84,7 @@ export default function skinQuiz() {
                 }
             `}</style>
             </div>
+
         </>
 
     );
