@@ -12,15 +12,27 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to SkinCare.io
+          Welcome to Skincare.io
         </h1>
 
         <p className={styles.description}>
-          Find your custom skincare routine!
+          Discover your custom skincare routine!
         </p>
 
+        <img
+          className="h-48 w-auto pt-10"
+          src="/sparkle-logo.png"
+          alt="Skincare.io logo"
+        />
+
         <div className={styles.grid}>
-          <h3 className={styles.card}> <a href="/skinQuiz">Get Started</a></h3>
+
+          <a href="/skinQuiz"
+            className=''
+
+          ><div
+            className='w-32 bg-white rounded-lg border-2 border-black text-center hover:border-2 hover:border-white'
+          >Get Started</div></a>
         </div>
       </main>
 
