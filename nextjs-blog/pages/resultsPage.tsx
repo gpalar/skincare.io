@@ -36,7 +36,7 @@ function NavBar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start w-full">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="hidden h-8 w-auto lg:block"
+                    className="h-8 w-auto"
                     src="/sparkle-logo.png"
                   />
                 </div>
