@@ -14,7 +14,7 @@ const navigation = [
     return classes.filter(Boolean).join(' ')
   }
 
-  
+
 export default function skinQuiz() {
     return (
         <>
@@ -157,7 +157,7 @@ export default function skinQuiz() {
                     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
                     sans-serif;
                 // font-family: "DomaineDisplayNarrow",Georgia,serif;
-                background-color: #E6DDDE;
+                background-color: #fffbef;
                 }
                 * {
                 box-sizing: border-box;
