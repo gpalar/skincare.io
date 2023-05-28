@@ -28,7 +28,7 @@ export default function skinQuiz() {
     const [brightening, setBrightening] = useState(false)
     const [acne, setAcne] = useState(false)
 
-    var resultsPageURL = `/resultsPage?dry=${dry}&oily=${oily}&sensitive=${sensitive}&acne=${acne}&antiAging=${antiAging}&brightening=${brightening}&uv=${uv}`
+    const resultsPageURL = `/resultsPage?dry=${dry}&oily=${oily}&sensitive=${sensitive}&acne=${acne}&antiAging=${antiAging}&brightening=${brightening}&uv=${uv}`
 
     return (
         <>
@@ -52,7 +52,8 @@ export default function skinQuiz() {
                                         setState={setOily}
                                         text="Oily"
                                         color="blue"
-                                    // icon={RiCactusLine}
+                                        icon={'/rainDrop.png'}
+
                                     />
 
                                 </div>
@@ -62,7 +63,7 @@ export default function skinQuiz() {
                                         setState={setDry}
                                         text="Dry"
                                         color="purple"
-                                    // icon={RiCactusLine}
+                                        icon={'/cactus.png'}
                                     />
                                 </div>
                                 <div className="bg-light-tan">
@@ -71,7 +72,7 @@ export default function skinQuiz() {
                                         setState={setSensitive}
                                         text="Sensitive"
                                         color="purple"
-                                    // icon={RiCactusLine}
+                                        icon={'/sensitive.png'}
                                     />
                                 </div>
 
@@ -90,7 +91,7 @@ export default function skinQuiz() {
                                         setState={setAcne}
                                         text="Acne"
                                         color="blue"
-                                    // icon={RiCactusLine}
+                                        icon={'/acne.png'}
                                     />
                                 </div>
 
@@ -100,7 +101,7 @@ export default function skinQuiz() {
                                         setState={setAntiAging}
                                         text="Anti-Aging"
                                         color="purple"
-                                    // icon={RiCactusLine}
+                                        icon={'/serum.png'}
                                     />
                                 </div>
 
@@ -110,7 +111,7 @@ export default function skinQuiz() {
                                         setState={setBrightening}
                                         text="Brightening"
                                         color="purple"
-                                    // icon={RiCactusLine}
+                                        icon={'/shiney.png'}
                                     />
                                 </div>
 
@@ -120,7 +121,7 @@ export default function skinQuiz() {
                                         setState={setUv}
                                         text="UV"
                                         color="purple"
-                                    // icon={RiCactusLine}
+                                        icon={'/sun.png'}
                                     />
                                 </div>
 
@@ -135,7 +136,7 @@ export default function skinQuiz() {
                 </div>
 
                 <div className={styles.grid}>
-                    <a href="/resultsPage"
+                    <a href={resultsPageURL}
                         className=''
                     ><div className='w-32 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
                     >VIEW RESULTS</div>

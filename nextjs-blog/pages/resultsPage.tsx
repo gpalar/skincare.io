@@ -6,35 +6,49 @@ const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
 ]
 
+// function TempProducts() {
+//   return (
+//     <div>
+//       <Product
+//         src={"https://incidecoder-content.storage.googleapis.com/9cfe400f-c4bf-47bf-8972-f5b36c57f1d6/products/eve-lom-cleanser/eve-lom-cleanser_front_photo_original.jpeg"}
+//         title="Cleanser"
+//         tags={['good for oily skin', 'acne-friendly', 'brightening', 'good for sensitive skin']}
+//       />
 
-function TempProducts() {
+//     </div>
+//   );
+// };
+
+interface rowinterface {
+  header: string
+  products: any
+}
+
+function Row(props: rowinterface) {
   return (
-    <div>
-      <Product
-        src={"https://incidecoder-content.storage.googleapis.com/9cfe400f-c4bf-47bf-8972-f5b36c57f1d6/products/eve-lom-cleanser/eve-lom-cleanser_front_photo_original.jpeg"}
-        title="Cleanser"
-        tags={['good for oily skin', 'acne-friendly', 'brightening', 'good for sensitive skin']}
-      />
-
-    </div>
-  );
-};
-
-
-function Row() {
-  return (
-    <div className="grid grid-cols-3 gap-4 mb-4">
-      <div className="flex items-center justify-center h-96 rounded bg-white">
-        <TempProducts />
-        <p className="text-2xl text-gray-400"></p>
-      </div>
-      <div className="flex items-center justify-center h-96 rounded bg-white">
-        <TempProducts />
-        <p className="text-2xl text-gray-400 "></p>
-      </div>
-      <div className="flex items-center justify-center h-96 rounded bg-white">
-        <TempProducts />
-        <p className="text-2xl text-gray-400"></p>
+    <div id={props.header} style={{ padding: '1px', paddingLeft: '10px' }}>
+      <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>{props.header}</h1>
+      <div className="grid grid-cols-3 gap-4 mb-4">
+        {(props.products).map((prod) => (
+          (<div className="flex items-center justify-center h-94 rounded bg-gray-50 dark:bg-gray-800">
+            <Product
+              src={prod.image}
+              title={prod.name}
+              tags={[
+                prod.oily == 1 ? "good for oily skin" : '',
+                prod.dry == 1 ? "good for dry skin" : '',
+                prod.sensitive == 1 ? "good for sensitive skin" : '',
+                prod.acne_fighting == 1 ? "treats acne" : '',
+                prod.anti_aging == 1 ? "anti-aging" : '',
+                prod.brightening == 1 ? "brightening" : '',
+                prod.uv == 1 ? "UV protection" : ''
+              ]
+              }
+            />
+            <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+          </div>
+          )
+        ))}
       </div>
     </div>
   );
@@ -77,7 +91,14 @@ export default function resultsPage() {
 
   React.useEffect(() => {
 
-    fetch("http://localhost:3001/products/recommended", {
+    var hostname = 'https://api.skincarezotzotzot.com'
+    if (typeof window != 'undefined') {
+      if ((new URLSearchParams(window.location.search)).get('dev')) {
+        hostname = 'http://localhost:3001'
+      }
+    }
+
+    fetch(hostname + "/products/recommended", {
       method: 'POST',
       body: JSON.stringify(reqBody),
       mode: "cors",
@@ -89,6 +110,8 @@ export default function resultsPage() {
       .then((res) => res.json())
       .then((data) => setResults(data.productRecs))
   }, [])
+
+  console.log(results)
 
   return (
     <>
@@ -147,33 +170,27 @@ export default function resultsPage() {
         <div className="p-4 sm:ml-64">
           <div className="p-4 border-2 border-light-med-purple border-dashed rounded-lg dark:border-gray-700">
             <div>
-              <div id="Cleanser" style={{ padding: '0px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Cleanser</h1>
-              </div>
-              <Row />
-
-              <div id="Toner" style={{ padding: '15px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Toner</h1>
-              </div>
-              <Row />
-
-              <div id="Serum" style={{ padding: '15px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Serum</h1>
-              </div>
-              <Row />
-
-              <div id="Moisturizer" style={{ padding: '15px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Moisturizer</h1>
-              </div>
-              <Row />
-
-              <div id="Sunscreen" style={{ padding: '15px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Sunscreen</h1>
-              </div>
-              <Row />
-
+              <Row
+                header="Cleanser"
+                products={(results["cleanser"] || []).slice(0, 3)}
+              />
+              <Row
+                header="Toner"
+                products={(results["toner"] || []).slice(0, 3)}
+              />
+              <Row
+                header="Serum"
+                products={(results["serum"] || []).slice(0, 3)}
+              />
+              <Row
+                header="Moisturizer"
+                products={(results["moisturizer"] || []).slice(0, 3)}
+              />
+              <Row
+                header="Sunscreen"
+                products={(results["sunscreen"] || []).slice(0, 3)}
+              />
             </div>
-
           </div>
           <style jsx global>{`
                 html,
