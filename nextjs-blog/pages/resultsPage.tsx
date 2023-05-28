@@ -10,29 +10,29 @@ function classNames(...classes) {
 }
 
 const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
 };
 
 
 function Row() {
-    return (
-        <div className="grid grid-cols-3 gap-4 mb-4">
-              <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
-                <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
-              </div>
-              <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
-                <p className="text-2xl text-gray-400 dark:text-black"></p>
-              </div>
-              <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
-                <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
-              </div>
-        </div>
-    );
+  return (
+    <div className="grid grid-cols-3 gap-4 mb-4">
+      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+      </div>
+      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <p className="text-2xl text-gray-400 dark:text-black"></p>
+      </div>
+      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+      </div>
+    </div>
+  );
 };
-  
+
 
 export default function resultsPage() {
   return (
@@ -50,39 +50,39 @@ export default function resultsPage() {
             <ul className="space-y-2 font-medium">
               <li>
                 <a href="/" className="bg-sage-green flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
-                  <img className= "w-8 h-8" src="sparkle-logo.png"/>
+                  <img className="w-8 h-8" src="sparkle-logo.png" />
                   <span className="ml-3">Skincare.io</span>
 
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <a href="#Cleanser" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <img className=" w-8 h-8" src="\cleanser.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Cleanser</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                <img className=" w-8 h-8" src="\toner.png"></img>
+                <a href="#Toner" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <img className=" w-8 h-8" src="\toner.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Toner</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                <img className=" w-8 h-8" src="\serum.png"></img>
-                <span className="flex-1 ml-3 whitespace-nowrap">Serum</span>
+                <a href="#Serum" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <img className=" w-8 h-8" src="\serum.png"></img>
+                  <span className="flex-1 ml-3 whitespace-nowrap">Serum</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                <img className=" w-8 h-8" src="\moisturizer.png"></img>
-                <span className="flex-1 ml-3 whitespace-nowrap">Moisturizer</span>
+                <a href="#Moisturizer" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <img className=" w-8 h-8" src="\moisturizer.png"></img>
+                  <span className="flex-1 ml-3 whitespace-nowrap">Moisturizer</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                <img className=" w-8 h-8" src="\sunscreen.png"></img>
-                <span className="flex-1 ml-3 whitespace-nowrap">Sunscreen</span>
+                <a href="#Sunscreen" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <img className=" w-8 h-8" src="\sunscreen.png"></img>
+                  <span className="flex-1 ml-3 whitespace-nowrap">Sunscreen</span>
                 </a>
               </li>
             </ul>
@@ -90,32 +90,33 @@ export default function resultsPage() {
         </aside>
 
         <div className="p-4 sm:ml-64">
-            <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+          <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
             <div>
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+
+              <div id="Cleanser" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Cleanser</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Toner" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Toner</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Serum" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Serum</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Moisturizer" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Moisturizer</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Sunscreen" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Sunscreen</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
             </div>
 
