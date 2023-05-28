@@ -9,15 +9,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const SmoothScrollButton = () => {
-    const scrollRef = useRef(null);
-  
-    const handleClick = () => {
-      scrollRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    };
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
 };
 
 
@@ -36,24 +32,7 @@ function Row() {
         </div>
     );
 };
-
-// function SubSection() {
-//     return (
-
-//     );
-// };
-
-// function Row() {
-//     return (
-//         <div>
-
-//             <Box />
-//             <Box />
-//             <Box />
-//         </div>
-//     );
-// };
-    
+  
 
 export default function resultsPage() {
   return (
