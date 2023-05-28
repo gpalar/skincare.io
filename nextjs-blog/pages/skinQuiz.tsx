@@ -28,7 +28,7 @@ export default function skinQuiz() {
     const [brightening, setBrightening] = useState(false)
     const [acne, setAcne] = useState(false)
 
-    var resultsPageURL = `/resultsPage?dry=${dry}&oily=${oily}&sensitive=${sensitive}&acne=${acne}&antiAging=${antiAging}&brightening=${brightening}&uv=${uv}`
+    const resultsPageURL = `/resultsPage?dry=${dry}&oily=${oily}&sensitive=${sensitive}&acne=${acne}&antiAging=${antiAging}&brightening=${brightening}&uv=${uv}`
 
     return (
         <>
@@ -135,7 +135,7 @@ export default function skinQuiz() {
                 </div>
 
                 <div className={styles.grid}>
-                    <a href="/resultsPage"
+                    <a href={resultsPageURL}
                         className=''
                     ><div className='w-32 p-2 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
                     >VIEW RESULTS</div>

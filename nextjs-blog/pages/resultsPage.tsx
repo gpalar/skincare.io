@@ -26,7 +26,6 @@ interface rowinterface {
 
 function Row(props: rowinterface) {
   return (
-    <>
     <div id={props.header} style={{ padding: '1px', paddingLeft: '10px' }}>
       <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>{props.header}</h1>
       <div className="grid grid-cols-3 gap-4 mb-4">
@@ -51,7 +50,7 @@ function Row(props: rowinterface) {
             )
           ))}
     </div>
-    </>
+    </div>
   );
 };
 
@@ -112,8 +111,7 @@ export default function resultsPage() {
       .then((data) => setResults(data.productRecs))
   }, [])
 
-  console.log("results", results)
-  console.log("results.cleanser", results["cleanser"])
+  console.log(results)
 
   return (
     <>
@@ -175,6 +173,22 @@ export default function resultsPage() {
               <Row 
                 header="Cleanser"
                 products={(results["cleanser"] || []).slice(0, 3)}
+                />
+              <Row 
+                header="Toner"
+                products={(results["toner"] || []).slice(0, 3)}
+                />
+              <Row 
+                header="Serum"
+                products={(results["serum"] || []).slice(0, 3)}
+                />
+              <Row 
+                header="Moisturizer"
+                products={(results["moisturizer"] || []).slice(0, 3)}
+                />
+              <Row 
+                header="Sunscreen"
+                products={(results["sunscreen"] || []).slice(0, 3)}
                 />
             </div>
           </div>
