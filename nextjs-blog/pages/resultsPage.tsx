@@ -9,7 +9,7 @@ const navigation = [
 
 function Tag(props) {
   return (
-    <div className="px-1 py-1 bg-sage-green rounded-full " style={{backgroundColor: '${bg-sage-green}'}}>
+    <div className="px-1 py-1 bg-sage-green rounded-full " style={{ backgroundColor: '${bg-sage-green}' }}>
       {props.name}
     </div>
   );
@@ -24,7 +24,7 @@ function TempProducts() {
         title="Cleanser"
         tags={['good for oily skin', 'acne-friendly', 'brightening', 'good for sensitive skin']}
       />
-    
+
     </div>
   );
 };
@@ -85,19 +85,19 @@ export default function resultsPage() {
   }
 
   React.useEffect(() => {
-  
-      fetch("http://localhost:3001/products/recommended", {
-        method: 'POST',
-        body: JSON.stringify(reqBody),
-        mode: "cors",
-        credentials: "same-origin",
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      })
+
+    fetch("http://localhost:3001/products/recommended", {
+      method: 'POST',
+      body: JSON.stringify(reqBody),
+      mode: "cors",
+      credentials: "same-origin",
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
       .then((res) => res.json())
       .then((data) => setResults(data.productRecs))
-    }, [])
+  }, [])
 
   return (
     <>
