@@ -3,7 +3,7 @@
 @tailwind utilities; */
 
 .container {
-  min-height: 100vh;
+  min-height: 0vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,10 @@
   height: 1em;
 }
 
+#skinQuizDiv {
+  position: relative;
+  top: -50px;
+}
 
 
 @media (max-width: 600px) {

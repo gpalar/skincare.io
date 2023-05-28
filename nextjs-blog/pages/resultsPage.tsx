@@ -29,8 +29,6 @@ function Row(props: rowinterface) {
     <>
     <div id={props.header} style={{ padding: '1px', paddingLeft: '10px' }}>
       <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>{props.header}</h1>
-      </div>
-
       <div className="grid grid-cols-3 gap-4 mb-4">
         {(props.products).map((prod) => (
             (<div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
@@ -131,7 +129,7 @@ export default function resultsPage() {
           <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium">
               <li>
-                <a href="/" className="bg-sage-green flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
+                <a href="/" className="bg-light-med-purple flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
                   <img className="w-8 h-8" src="sparkle-logo.png" />
                   <span className="ml-3">Skincare.io</span>
 
@@ -139,13 +137,13 @@ export default function resultsPage() {
               </li>
               <li>
                 <a href="#Cleanser" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <img className=" w-8 h-8" src="\cleanser.png"></img>
+                  <img className=" w-8 h-8 padding-20" src="\cleanser.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Cleanser</span>
                 </a>
               </li>
               <li>
                 <a href="#Toner" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <img className=" w-8 h-8" src="\toner.png"></img>
+                  <img className=" w-8 h-8 padding-20" src="\toner.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Toner</span>
                 </a>
               </li>

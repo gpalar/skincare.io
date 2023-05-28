@@ -12,34 +12,29 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to Skincare.io
-        </h1>
-
-        <p className={styles.description}>
-          Discover your custom skincare routine!
-        </p>
-
-        <img
-          className="h-48 w-auto pt-10"
-          src="/sparkle-logo.png"
-          alt="Skincare.io logo"
-        />
+        <div className="flex flex-col mx-auto ">
+          <div className="flex flex-row pt-52" >
+            <img className="pl-6 py-6 h-28 w-64" src="skincare.io.png" />
+            {/* <img className="pl-6 py-6 h-10 w-10" src="FiSmile.png" /> */}
+          </div>
+          <p> Discover your custom skincare routine </p>
+        </div>
 
         <div className={styles.grid}>
-
           <a href="/skinQuiz"
             className=''
-
-          ><div
-            className='w-32 bg-white rounded-lg border-2 border-black text-center hover:border-2 hover:border-white'
-          >Get Started</div></a>
+          ><div className='w-32 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
+          >GET STARTED</div>
+          </a>
         </div>
       </main>
 
-      <footer>
-        Made with 🧡
-      </footer>
+      <div className="pt-56 border-t-0">
+        <footer className="">
+          Made with ♡
+        </footer>
+      </div>
+
 
       <style jsx>{`
         main {
@@ -86,7 +81,7 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
-            background-color: #E6DDDE;
+            background-color: #F6EFEA;
         }
         * {
           box-sizing: border-box;
