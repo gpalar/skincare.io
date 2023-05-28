@@ -6,19 +6,6 @@ const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
 ]
 
-// function TempProducts() {
-//   return (
-//     <div>
-//       <Product
-//         src={"https://incidecoder-content.storage.googleapis.com/9cfe400f-c4bf-47bf-8972-f5b36c57f1d6/products/eve-lom-cleanser/eve-lom-cleanser_front_photo_original.jpeg"}
-//         title="Cleanser"
-//         tags={['good for oily skin', 'acne-friendly', 'brightening', 'good for sensitive skin']}
-//       />
-
-//     </div>
-//   );
-// };
-
 interface rowinterface {
   header: string
   products: any
@@ -28,28 +15,28 @@ function Row(props: rowinterface) {
   return (
     <div id={props.header} style={{ padding: '1px', paddingLeft: '10px' }}>
       <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>{props.header}</h1>
-      <div className="grid grid-cols-3 gap-4 mb-4">
+      <div className="bg-white grid grid-cols-3 gap-4 mb-4">
         {(props.products).map((prod) => (
-            (<div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
-              <Product
-                src={prod.image}
-                title={prod.name}
-                tags={[
-                       prod.oily == 1 ? "good for oily skin" : '',
-                       prod.dry == 1 ? "good for dry skin" : '',
-                       prod.sensitive == 1 ? "good for sensitive skin" : '',
-                       prod.acne_fighting == 1 ? "treats acne" : '',
-                       prod.anti_aging == 1 ? "anti-aging" : '',
-                       prod.brightening == 1 ? "brightening" : '',
-                       prod.uv == 1 ? "UV protection" : ''
-                      ]
-                      }
-              />
-              <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
-            </div>
-            )
-          ))}
-    </div>
+          (<div className="flex items-center justify-center h-94 rounded bg-gray-50 dark:bg-gray-800">
+            <Product
+              src={prod.image}
+              title={prod.name}
+              tags={[
+                prod.oily == 1 ? "good for oily skin" : '',
+                prod.dry == 1 ? "good for dry skin" : '',
+                prod.sensitive == 1 ? "good for sensitive skin" : '',
+                prod.acne_fighting == 1 ? "treats acne" : '',
+                prod.anti_aging == 1 ? "anti-aging" : '',
+                prod.brightening == 1 ? "brightening" : '',
+                prod.uv == 1 ? "UV protection" : ''
+              ]
+              }
+            />
+            <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+          </div>
+          )
+        ))}
+      </div>
     </div>
   );
 };
@@ -94,11 +81,11 @@ export default function resultsPage() {
     var hostname = 'https://api.skincarezotzotzot.com'
     if (typeof window != 'undefined') {
       if ((new URLSearchParams(window.location.search)).get('dev')) {
-        hostname ='http://localhost:3001'
+        hostname = 'http://localhost:3001'
       }
     }
 
-    fetch(hostname+"/products/recommended", {
+    fetch(hostname + "/products/recommended", {
       method: 'POST',
       body: JSON.stringify(reqBody),
       mode: "cors",
@@ -124,7 +111,7 @@ export default function resultsPage() {
         </button>
 
         <aside id="default-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-          <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+          <div className="bg-light-light-tan h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium">
               <li>
                 <a href="/" className="bg-light-med-purple flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
@@ -168,30 +155,42 @@ export default function resultsPage() {
         </aside>
 
         <div className="p-4 sm:ml-64">
-          <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+          <div className="p-4 border-2 border-light-med-purple border-dashed rounded-lg dark:border-gray-700">
             <div>
-              <Row 
+              <Row
                 header="Cleanser"
                 products={(results["cleanser"] || []).slice(0, 3)}
-                />
-              <Row 
+              />
+              <Row
                 header="Toner"
                 products={(results["toner"] || []).slice(0, 3)}
-                />
-              <Row 
+              />
+              <Row
                 header="Serum"
                 products={(results["serum"] || []).slice(0, 3)}
-                />
-              <Row 
+              />
+              <Row
                 header="Moisturizer"
                 products={(results["moisturizer"] || []).slice(0, 3)}
-                />
-              <Row 
+              />
+              <Row
                 header="Sunscreen"
                 products={(results["sunscreen"] || []).slice(0, 3)}
-                />
+              />
             </div>
           </div>
+          <style jsx global>{`
+                html,
+                body {
+                padding: 0;
+                margin: 0;
+    
+                background-color: #F6EFEA;
+                }
+                * {
+                box-sizing: border-box;
+                }
+            `}</style>
         </div>
       </>
     </>

@@ -138,7 +138,7 @@ export default function skinQuiz() {
                 <div className={styles.grid}>
                     <a href={resultsPageURL}
                         className=''
-                    ><div className='w-32 p-2 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
+                    ><div className='w-32 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
                     >VIEW RESULTS</div>
                     </a>
                 </div>
