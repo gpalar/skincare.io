@@ -62,6 +62,12 @@ export default function resultsPage() {
     "brightening": 0,
     "uv": 0
   }
+  if (typeof window != 'undefined') {
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  console.log(urlParams.get('dry'))
+  console.log(urlParams.get('oily'))
+  console.log(urlParams.get('sensitive'))
 
   // grab selected quiz options from parameters
   if (typeof window != 'undefined') {
@@ -195,4 +201,4 @@ export default function resultsPage() {
       </>
     </>
   );
-}
+  }}
