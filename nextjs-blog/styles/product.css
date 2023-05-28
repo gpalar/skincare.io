@@ -1,22 +1,28 @@
 .product {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: flex-start;
+    width: fit-content;
+    height: fit-content;
 }
 
-.product-content {
+.product_content {
     flex-grow: 1;
 }
 
-.product-title {
-    font-size: 18px;
+.product_title {
+    font-size: 20px;
     margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif !important;
 }
 
-.product-tags {
+.product_tags {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .tag {
@@ -25,4 +31,6 @@
     padding: 3px 6px;
     margin-right: 5px;
     border-radius: 3px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif !important;
 }

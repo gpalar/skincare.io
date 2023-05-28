@@ -10,9 +10,9 @@ function TempProducts() {
   return (
     <div>
       <Product
-        src={"https://incidecoder-content.storage.googleapis.com/6a2ea6cb-3832-4d28-b6bd-12b724455ab7/products/ella-bache-balancing-serum-serum-antiase/ella-bache-balancing-serum-serum-antiase_front_photo_original.jpeg"}
-        title="Serum"
-        tags={['tag1', 'tag2', 'tag3']}
+        src={"https://incidecoder-content.storage.googleapis.com/9cfe400f-c4bf-47bf-8972-f5b36c57f1d6/products/eve-lom-cleanser/eve-lom-cleanser_front_photo_original.jpeg"}
+        title="Cleanser"
+        tags={['good for oily skin', 'acne-friendly', 'brightening', 'good for sensitive skin']}
       />
     </div>
   );
@@ -98,27 +98,27 @@ export default function resultsPage() {
         <div className="p-4 sm:ml-64">
           <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
             <div>
-              <div id="Cleanser" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div id="Cleanser" style={{ padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Cleanser</h1>
               </div>
               <Row />
 
-              <div id="Toner" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div id="Toner" style={{ padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Toner</h1>
               </div>
               <Row />
 
-              <div id="Serum" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div id="Serum" style={{ padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Serum</h1>
               </div>
               <Row />
 
-              <div id="Moisturizer" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div id="Moisturizer" style={{ padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Moisturizer</h1>
               </div>
               <Row />
 
-              <div id="Sunscreen" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div id="Sunscreen" style={{ padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Sunscreen</h1>
               </div>
               <Row />
