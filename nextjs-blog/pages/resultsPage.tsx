@@ -17,7 +17,7 @@ function Row(props: rowinterface) {
       <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>{props.header}</h1>
       <div className="bg-white grid grid-cols-3 gap-4 mb-4">
         {(props.products).map((prod) => (
-          (<div className="flex items-center justify-center h-94 rounded bg-gray-50 dark:bg-gray-800">
+          (<div className="flex items-center justify-center h-[360px] rounded bg-gray-50 dark:bg-gray-800">
             <Product
               src={prod.image}
               title={prod.name}

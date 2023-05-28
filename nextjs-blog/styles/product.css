@@ -14,9 +14,10 @@
 }
 
 .product_content {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     padding-top: 15px;
-    padding-left: 20px;
+    padding-left: 5px;
+    text-align: left;
 }
 
 .product_title {

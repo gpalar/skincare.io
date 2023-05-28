@@ -1,8 +1,15 @@
 import './../styles/globals.css';
 import '../styles/product.css';
 import Head from 'next/head';
+import ReactGA from 'react-ga';
+import React, { useEffect } from 'react';
+
+ReactGA.initialize('G-BC6CD566JM');
 
 export default function App({ Component, pageProps }) {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
     return <>
         <Head>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
