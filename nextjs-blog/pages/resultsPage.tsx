@@ -6,19 +6,6 @@ const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
 ]
 
-// function TempProducts() {
-//   return (
-//     <div>
-//       <Product
-//         src={"https://incidecoder-content.storage.googleapis.com/9cfe400f-c4bf-47bf-8972-f5b36c57f1d6/products/eve-lom-cleanser/eve-lom-cleanser_front_photo_original.jpeg"}
-//         title="Cleanser"
-//         tags={['good for oily skin', 'acne-friendly', 'brightening', 'good for sensitive skin']}
-//       />
-
-//     </div>
-//   );
-// };
-
 interface rowinterface {
   header: string
   products: any
@@ -28,7 +15,7 @@ function Row(props: rowinterface) {
   return (
     <div id={props.header} style={{ padding: '1px', paddingLeft: '10px' }}>
       <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>{props.header}</h1>
-      <div className="grid grid-cols-3 gap-4 mb-4">
+      <div className="bg-white grid grid-cols-3 gap-4 mb-4">
         {(props.products).map((prod) => (
           (<div className="flex items-center justify-center h-94 rounded bg-gray-50 dark:bg-gray-800">
             <Product
