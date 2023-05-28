@@ -1,4 +1,5 @@
 import 'flowbite'
+import React, { useRef } from 'react';
 
 const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
@@ -8,6 +9,43 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const SmoothScrollButton = () => {
+    const scrollRef = useRef(null);
+  
+    const handleClick = () => {
+      scrollRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    };
+
+
+// function Box() {
+//     return (
+//         <div className="grid grid-cols-3 gap-4 mb-4">
+//               <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+//                 <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+//               </div>
+//               <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+//                 <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+//               </div>
+//               <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+//                 <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+//               </div>
+//         </div>
+//     );
+// };
+
+// function Row() {
+//     return (
+//         <div>
+//             <Box />
+//             <Box />
+//             <Box />
+//         </div>
+//     );
+// };
+    
 
 export default function resultsPage() {
   return (
@@ -27,7 +65,7 @@ export default function resultsPage() {
                 <a href="/" className="bg-sage-green flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
                   <img className= "w-8 h-8" src="sparkle-logo.png"/>
                   <span className="ml-3">Skincare.io</span>
-                  
+
                 </a>
               </li>
               <li>
@@ -128,4 +166,3 @@ export default function resultsPage() {
     </>
   );
 }
-
