@@ -8,8 +8,15 @@
     height: fit-content;
 }
 
+.product_image {
+    height: 210px;
+    width: auto;
+}
+
 .product_content {
     flex-grow: 1;
+    padding-top: 15px;
+    padding-left: 20px;
 }
 
 .product_title {
@@ -26,7 +33,7 @@
 }
 
 .tag {
-    background-color: #eee;
+    background-color: #E1CEEA;
     color: #333;
     padding: 3px 6px;
     margin-right: 5px;

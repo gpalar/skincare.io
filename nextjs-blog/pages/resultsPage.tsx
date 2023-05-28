@@ -24,15 +24,15 @@ function TempProducts() {
 function Row() {
   return (
     <div className="grid grid-cols-3 gap-4 mb-4">
-      <div className="flex items-center justify-center h-64 rounded bg-white">
+      <div className="flex items-center justify-center h-96 rounded bg-white">
         <TempProducts />
         <p className="text-2xl text-gray-400"></p>
       </div>
-      <div className="flex items-center justify-center h-64 rounded bg-white">
+      <div className="flex items-center justify-center h-96 rounded bg-white">
         <TempProducts />
         <p className="text-2xl text-gray-400 "></p>
       </div>
-      <div className="flex items-center justify-center h-64 rounded bg-white">
+      <div className="flex items-center justify-center h-96 rounded bg-white">
         <TempProducts />
         <p className="text-2xl text-gray-400"></p>
       </div>
@@ -101,7 +101,7 @@ export default function resultsPage() {
         </button>
 
         <aside id="default-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-          <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+          <div className="bg-light-light-tan h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul className="space-y-2 font-medium">
               <li>
                 <a href="/" className="bg-light-med-purple flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
@@ -145,36 +145,48 @@ export default function resultsPage() {
         </aside>
 
         <div className="p-4 sm:ml-64">
-          <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+          <div className="p-4 border-2 border-light-med-purple border-dashed rounded-lg dark:border-gray-700">
             <div>
-              <div id="Cleanser" style={{ padding: '1px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Cleanser</h1>
+              <div id="Cleanser" style={{ padding: '0px', paddingLeft: '10px' }}>
+                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Cleanser</h1>
               </div>
               <Row />
 
-              <div id="Toner" style={{ padding: '1px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Toner</h1>
+              <div id="Toner" style={{ padding: '15px', paddingLeft: '10px' }}>
+                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Toner</h1>
               </div>
               <Row />
 
-              <div id="Serum" style={{ padding: '1px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Serum</h1>
+              <div id="Serum" style={{ padding: '15px', paddingLeft: '10px' }}>
+                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Serum</h1>
               </div>
               <Row />
 
-              <div id="Moisturizer" style={{ padding: '1px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Moisturizer</h1>
+              <div id="Moisturizer" style={{ padding: '15px', paddingLeft: '10px' }}>
+                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Moisturizer</h1>
               </div>
               <Row />
 
-              <div id="Sunscreen" style={{ padding: '1px', paddingLeft: '10px' }}>
-                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Sunscreen</h1>
+              <div id="Sunscreen" style={{ padding: '15px', paddingLeft: '10px' }}>
+                <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>Sunscreen</h1>
               </div>
               <Row />
 
             </div>
 
           </div>
+          <style jsx global>{`
+                html,
+                body {
+                padding: 0;
+                margin: 0;
+    
+                background-color: #F6EFEA;
+                }
+                * {
+                box-sizing: border-box;
+                }
+            `}</style>
         </div>
       </>
     </>

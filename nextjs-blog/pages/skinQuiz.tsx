@@ -34,7 +34,7 @@ export default function skinQuiz() {
         <>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <a href="../">
-                <img className="pl-6 py-6 h-20 w-49" src="skincare.io.png" />
+                    <img className="pl-6 py-6 h-20 w-49" src="skincare.io.png" />
                 </a>
 
             </div>
@@ -137,7 +137,7 @@ export default function skinQuiz() {
                 <div className={styles.grid}>
                     <a href="/resultsPage"
                         className=''
-                    ><div className='w-32 p-2 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
+                    ><div className='w-32 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
                     >VIEW RESULTS</div>
                     </a>
                 </div>

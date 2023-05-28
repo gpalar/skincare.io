@@ -26,7 +26,8 @@ module.exports = {
         'light-tan': '#F6E6D6',
         'medium-tan': '#CAAA8B',
         'dark-brown': '#4D3F53',
-        'light-med-purple': '#E1CEEA'
+        'light-med-purple': '#E1CEEA',
+        'light-light-tan': '#F6EFEA'
       },
     },
   },
