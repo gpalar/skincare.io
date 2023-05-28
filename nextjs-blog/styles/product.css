@@ -1,0 +1,35 @@
+.product {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.product-content {
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-tags {
+    display: flex;
+}
+
+.tag {
+    background-color: #eee;
+    color: #333;
+    padding: 3px 6px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
