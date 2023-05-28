@@ -7,15 +7,6 @@ const navigation = [
 ]
 
 
-function Tag(props) {
-  return (
-    <div className="px-1 py-1 bg-sage-green rounded-full " style={{ backgroundColor: '${bg-sage-green}' }}>
-      {props.name}
-    </div>
-  );
-};
-
-
 function TempProducts() {
   return (
     <div>
@@ -33,15 +24,15 @@ function TempProducts() {
 function Row() {
   return (
     <div className="grid grid-cols-3 gap-4 mb-4">
-      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-white">
         <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
-      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-white">
         <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
-      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-white">
         <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
@@ -121,13 +112,13 @@ export default function resultsPage() {
               </li>
               <li>
                 <a href="#Cleanser" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <img className=" w-8 h-8" src="\cleanser.png"></img>
+                  <img className=" w-8 h-8 padding-20" src="\cleanser.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Cleanser</span>
                 </a>
               </li>
               <li>
                 <a href="#Toner" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <img className=" w-8 h-8" src="\toner.png"></img>
+                  <img className=" w-8 h-8 padding-20" src="\toner.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Toner</span>
                 </a>
               </li>
