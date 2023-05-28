@@ -9,19 +9,13 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// const scrollToSection = (sectionId) => {
-//     const section = document.getElementById(sectionId);
-//     if (section) {
-//       section.scrollIntoView({ behavior: 'smooth' });
-//     }
-// };
-
-
-const scrollToSection = () => {
-    if (sectionRef.current) {
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
 
 
 function Row() {
@@ -39,7 +33,7 @@ function Row() {
         </div>
     );
 };
-  
+
 
 export default function resultsPage() {
   return (
@@ -57,7 +51,7 @@ export default function resultsPage() {
             <ul className="space-y-2 font-medium">
               <li>
                 <a href="/" className="bg-sage-green flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
-                  <img className= "w-8 h-8" src="sparkle-logo.png"/>
+                  <img className="w-8 h-8" src="sparkle-logo.png" />
                   <span className="ml-3">Skincare.io</span>
                 </a>
               </li>
@@ -98,30 +92,31 @@ export default function resultsPage() {
         <div className="p-4 sm:ml-96">
             <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
             <div>
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+
+              <div id="Cleanser" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Cleanser</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Toner" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Toner</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Serum" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Serum</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Moisturizer" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Moisturizer</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
-                <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px'}}>
+              <div id="Sunscreen" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Sunscreen</h1>
-                </div>
-                <Row />
+              </div>
+              <Row />
 
             </div>
 
