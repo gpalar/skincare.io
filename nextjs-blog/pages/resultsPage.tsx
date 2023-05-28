@@ -1,5 +1,6 @@
 import 'flowbite'
 import React, { useRef } from 'react';
+import Product from '../components/product';
 
 const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
@@ -14,24 +15,44 @@ const scrollToSection = (sectionId) => {
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+function TempProducts() {
+  return (
+    <div>
+      <Product
+        src={"https://incidecoder-content.storage.googleapis.com/6a2ea6cb-3832-4d28-b6bd-12b724455ab7/products/ella-bache-balancing-serum-serum-antiase/ella-bache-balancing-serum-serum-antiase_front_photo_original.jpeg"}
+        title="Serum"
+        tags={['tag1', 'tag2', 'tag3']}
+      />
+    </div>
+  );
 };
 
 
 function Row() {
   return (
     <div className="grid grid-cols-3 gap-4 mb-4">
-      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
-      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-black"></p>
+      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <TempProducts />
+        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
-      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
     </div>
   );
 };
+
 
 
 export default function resultsPage() {
@@ -56,31 +77,31 @@ export default function resultsPage() {
                 </a>
               </li>
               <li>
-                <a href="#Cleanser" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <img className=" w-8 h-8" src="\cleanser.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Cleanser</span>
                 </a>
               </li>
               <li>
-                <a href="#Toner" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <img className=" w-8 h-8" src="\toner.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Toner</span>
                 </a>
               </li>
               <li>
-                <a href="#Serum" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <img className=" w-8 h-8" src="\serum.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Serum</span>
                 </a>
               </li>
               <li>
-                <a href="#Moisturizer" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <img className=" w-8 h-8" src="\moisturizer.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Moisturizer</span>
                 </a>
               </li>
               <li>
-                <a href="#Sunscreen" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <img className=" w-8 h-8" src="\sunscreen.png"></img>
                   <span className="flex-1 ml-3 whitespace-nowrap">Sunscreen</span>
                 </a>
@@ -92,28 +113,27 @@ export default function resultsPage() {
         <div className="p-4 sm:ml-64">
           <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
             <div>
-
-              <div id="Cleanser" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Cleanser</h1>
               </div>
               <Row />
 
-              <div id="Toner" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Toner</h1>
               </div>
               <Row />
 
-              <div id="Serum" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Serum</h1>
               </div>
               <Row />
 
-              <div id="Moisturizer" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Moisturizer</h1>
               </div>
               <Row />
 
-              <div id="Sunscreen" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
+              <div style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Sunscreen</h1>
               </div>
               <Row />
