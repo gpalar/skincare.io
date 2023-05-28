@@ -73,13 +73,13 @@ export default function resultsPage() {
   if (typeof window != 'undefined') {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
-    reqBody.dry = urlParams.get('dry') ? 1 : 0
-    reqBody.oily = urlParams.get('oily') ? 1 : 0
-    reqBody.sensitive = urlParams.get('sensitive') ? 1 : 0
-    reqBody.acne_fighting = urlParams.get('acne') ? 1 : 0
-    reqBody.anti_aging = urlParams.get('antiAging') ? 1 : 0
-    reqBody.brightening = urlParams.get('brightening') ? 1 : 0
-    reqBody.uv = urlParams.get('uv') ? 1 : 0
+    reqBody.dry = urlParams.get('dry') === "true"  ? 1 : 0
+    reqBody.oily = urlParams.get('oily') === "true" ? 1 : 0
+    reqBody.sensitive = urlParams.get('sensitive') === "true"  ? 1 : 0
+    reqBody.acne_fighting = urlParams.get('acne') === "true"  ? 1 : 0
+    reqBody.anti_aging = urlParams.get('antiAging') === "true"  ? 1 : 0
+    reqBody.brightening = urlParams.get('brightening') === "true"  ? 1 : 0
+    reqBody.uv = urlParams.get('uv') === "true"  ? 1 : 0
   }
 
   React.useEffect(() => {
