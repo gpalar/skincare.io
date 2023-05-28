@@ -85,7 +85,7 @@ export default function resultsPage() {
         }
       })
       .then((res) => res.json())
-      .then((data) => setResults(data?.productRecs))
+      .then((data) => setResults(data.productRecs))
     }, [])
 
   return (
