@@ -13,7 +13,7 @@ export default function Home() {
 
       <main>
         <div className="flex flex-col mx-auto ">
-          <div className="flex flex-row">
+          <div className="flex flex-row pt-52" >
             <img className="pl-6 py-6 h-28 w-64" src="skincare.io.png" />
             {/* <img className="pl-6 py-6 h-10 w-10" src="FiSmile.png" /> */}
           </div>
@@ -29,9 +29,12 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
-        Made with ♡
-      </footer>
+      <div className="pt-56 border-t-0">
+        <footer className="">
+          Made with ♡
+        </footer>
+      </div>
+
 
       <style jsx>{`
         main {
