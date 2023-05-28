@@ -6,13 +6,6 @@
     border-radius: 4px;
 }
 
-.product-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
 .product-content {
     flex-grow: 1;
 }
