@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>skincare.io</title>
+        <link rel="icon" href="sparkle-logo.png" />
       </Head>
 
       <main>
