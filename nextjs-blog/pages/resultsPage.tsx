@@ -27,6 +27,7 @@ export default function resultsPage() {
                 <a href="/" className="bg-sage-green flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
                   <img className= "w-8 h-8" src="sparkle-logo.png"/>
                   <span className="ml-3">Skincare.io</span>
+                  
                 </a>
               </li>
               <li>
