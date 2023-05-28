@@ -11,7 +11,7 @@ function Product(props: productinterface) {
 
     return (
         <div className="product">
-            <img src={props.src} alt="product image" className="product-image" width="auto" height="100" />
+            <img src={props.src} alt="product image" className="product-image" width="130" height="auto" />
             <div className="product-content">
                 <h3 className="product-title">{props.title}</h3>
                 <div className="product-tags">
