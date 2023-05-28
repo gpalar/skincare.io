@@ -28,6 +28,8 @@ export default function skinQuiz() {
     const [brightening, setBrightening] = useState(false)
     const [acne, setAcne] = useState(false)
 
+    var resultsPageURL = `/resultsPage?dry=${dry}&oily=${oily}&sensitive=${sensitive}&acne=${acne}&antiAging=${antiAging}&brightening=${brightening}&uv=${uv}`
+
     return (
         <>
             <Disclosure as="nav" className="bg-sage-green">
@@ -111,76 +113,80 @@ export default function skinQuiz() {
 
                 <h1 className={styles.title}>Skin Quiz</h1>
 
-                <div className="max-w-screen-lg mx-auto p-8">
-                    <div className="grid grid-cols-2 gap-40 ">
+                <div className="max-w-screen-lg mx-auto p-8 ">
+                    <div className="grid grid-rows-2 gap-20">
                         <div>
-                            <div className="grid grid-cols-2 gap-10 mt-12 ">
+                            <h1 className="text-2xl">Choose your skin type</h1>
+                            <div className="grid grid-cols-4 gap-10 mt-12">
                                 <SkinQuizBtn
                                     value={oily}
                                     setState={setOily}
                                     text="Oily"
                                     color="blue"
-                                    // icon={RiCactusLine}
+                                // icon={RiCactusLine}
                                 />
                                 <SkinQuizBtn
                                     value={dry}
                                     setState={setDry}
                                     text="Dry"
                                     color="purple"
-                                    // icon={RiCactusLine}
+                                // icon={RiCactusLine}
                                 />
                                 <SkinQuizBtn
                                     value={sensitive}
                                     setState={setSensitive}
                                     text="Sensitive"
                                     color="purple"
-                                    // icon={RiCactusLine}
+                                // icon={RiCactusLine}
                                 />
+                                <div>
+                                </div>
                             </div>
                         </div>
 
 
                         <div>
-                            <div className="grid grid-cols-2 gap-10 mt-12">
+                            <h1 className="text-2xl">Your skin needs</h1>
+                            <div className="grid grid-cols-4 gap-10 mt-12">
                                 <SkinQuizBtn
-                                        value={acne}
-                                        setState={setAcne}
-                                        text="Acne"
-                                        color="blue"
-                                        // icon={RiCactusLine}
-                                    />
-                                    <SkinQuizBtn
-                                        value={antiAging}
-                                        setState={setAntiAging}
-                                        text="Anti-Aging"
-                                        color="purple"
-                                        // icon={RiCactusLine}
-                                    />
-                                    <SkinQuizBtn
-                                        value={brightening}
-                                        setState={setBrightening}
-                                        text="Brightening"
-                                        color="purple"
-                                        // icon={RiCactusLine}
-                                    />
-                                    <SkinQuizBtn
-                                        value={uv}
-                                        setState={setUv}
-                                        text="UV"
-                                        color="purple"
-                                        // icon={RiCactusLine}
-                                    />
+                                    value={acne}
+                                    setState={setAcne}
+                                    text="Acne"
+                                    color="blue"
+                                // icon={RiCactusLine}
+                                />
+                                <SkinQuizBtn
+                                    value={antiAging}
+                                    setState={setAntiAging}
+                                    text="Anti-Aging"
+                                    color="purple"
+                                // icon={RiCactusLine}
+                                />
+                                <SkinQuizBtn
+                                    value={brightening}
+                                    setState={setBrightening}
+                                    text="Brightening"
+                                    color="purple"
+                                // icon={RiCactusLine}
+                                />
+                                <SkinQuizBtn
+                                    value={uv}
+                                    setState={setUv}
+                                    text="UV"
+                                    color="purple"
+                                // icon={RiCactusLine}
+                                />
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                <button className="bg-white hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                <button className="hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                     <svg className="fill-current w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd" />
                     </svg>
-                    <Link href="/resultsPage">Next</Link>
+                    <Link href={resultsPageURL}>Next</Link>
                 </button>
 
                 <style jsx global>{`
@@ -188,10 +194,7 @@ export default function skinQuiz() {
                 body {
                 padding: 0;
                 margin: 0;
-                font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-                    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-                    sans-serif;
-                // font-family: "DomaineDisplayNarrow",Georgia,serif;
+    
                 background-color: #fffbef;
                 }
                 * {

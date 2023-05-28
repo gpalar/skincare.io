@@ -8,9 +8,9 @@ interface skinbuttontype {
     icon?: any
 }
 
-function SkinQuizBtn(props:skinbuttontype) {
+function SkinQuizBtn(props: skinbuttontype) {
     return (
-        <button onClick={() => props.setState(!props.value)} className="w-40 h-40 shadow-lg p-8 rounded-xl bg-dark-purple hover:bg-gray-400 text-black font-bold ">
+        <button onClick={() => props.setState(!props.value)} className="w-40 h-40 shadow-lg p-8 bg-dark-purple hover:bg-gray-400 text-black font-bold ">
             {props.icon}
             {props.text}
         </button>
