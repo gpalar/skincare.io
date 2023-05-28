@@ -118,27 +118,34 @@ export default function skinQuiz() {
                         <div>
                             <h1 className="text-2xl">Choose your skin type</h1>
                             <div className="grid grid-cols-4 gap-10 mt-12">
-                                <SkinQuizBtn
-                                    value={oily}
-                                    setState={setOily}
-                                    text="Oily"
-                                    color="blue"
-                                // icon={RiCactusLine}
-                                />
-                                <SkinQuizBtn
-                                    value={dry}
-                                    setState={setDry}
-                                    text="Dry"
-                                    color="purple"
-                                // icon={RiCactusLine}
-                                />
-                                <SkinQuizBtn
+                                <div className="bg-light-tan">
+                                    <SkinQuizBtn
+                                        value={oily}
+                                        setState={setOily}
+                                        text="Oily"
+                                        color="blue"
+                                    // icon={RiCactusLine}
+                                    />
+                                </div>
+                                <div className="bg-light-tan">
+                                    <SkinQuizBtn
+                                        value={dry}
+                                        setState={setDry}
+                                        text="Dry"
+                                        color="purple"
+                                    // icon={RiCactusLine}
+                                    />
+                                </div>
+                                <div className="bg-light-tan"> 
+                                    <SkinQuizBtn
                                     value={sensitive}
                                     setState={setSensitive}
                                     text="Sensitive"
                                     color="purple"
                                 // icon={RiCactusLine}
                                 />
+                                </div>
+                                
                                 <div>
                                 </div>
                             </div>
@@ -148,34 +155,46 @@ export default function skinQuiz() {
                         <div>
                             <h1 className="text-2xl">Your skin needs</h1>
                             <div className="grid grid-cols-4 gap-10 mt-12">
-                                <SkinQuizBtn
-                                    value={acne}
-                                    setState={setAcne}
-                                    text="Acne"
-                                    color="blue"
-                                // icon={RiCactusLine}
-                                />
-                                <SkinQuizBtn
-                                    value={antiAging}
-                                    setState={setAntiAging}
-                                    text="Anti-Aging"
-                                    color="purple"
-                                // icon={RiCactusLine}
-                                />
-                                <SkinQuizBtn
-                                    value={brightening}
-                                    setState={setBrightening}
-                                    text="Brightening"
-                                    color="purple"
-                                // icon={RiCactusLine}
-                                />
-                                <SkinQuizBtn
-                                    value={uv}
-                                    setState={setUv}
-                                    text="UV"
-                                    color="purple"
-                                // icon={RiCactusLine}
-                                />
+                                <div className="bg-light-tan">
+                                    <SkinQuizBtn
+                                        value={acne}
+                                        setState={setAcne}
+                                        text="Acne"
+                                        color="blue"
+                                    // icon={RiCactusLine}
+                                    />
+                                </div>
+
+                                <div className="bg-light-tan">
+                                    <SkinQuizBtn
+                                        value={antiAging}
+                                        setState={setAntiAging}
+                                        text="Anti-Aging"
+                                        color="purple"
+                                    // icon={RiCactusLine}
+                                    />
+                                </div>
+                                
+                                <div className="bg-light-tan">
+                                    <SkinQuizBtn
+                                        value={brightening}
+                                        setState={setBrightening}
+                                        text="Brightening"
+                                        color="purple"
+                                    // icon={RiCactusLine}
+                                    />
+                                </div>
+                                
+                                <div className="bg-light-tan">
+                                    <SkinQuizBtn
+                                        value={uv}
+                                        setState={setUv}
+                                        text="UV"
+                                        color="purple"
+                                    // icon={RiCactusLine}
+                                    />
+                                </div>
+                                
                             </div>
 
                         </div>
@@ -195,7 +214,7 @@ export default function skinQuiz() {
                 padding: 0;
                 margin: 0;
     
-                background-color: #fffbef;
+                background-color: #F6EFEA;
                 }
                 * {
                 box-sizing: border-box;

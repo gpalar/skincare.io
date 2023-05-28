@@ -1,42 +1,43 @@
 import 'flowbite'
 import React, { useRef } from 'react';
-import Select, { ActionMeta, OnChangeValue, StylesConfig } from 'react-select';
-import { ColourOption, colourOptions } from '../data';
+import Product from '../components/product';
 
 const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
 ]
 
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-
-// function Tag(prop) {
-//   return (
-//     <div className="px-3 py-1 bg-{prop.color} rounded-full" style={{backgroundColor: `${prop.color}`}}>
-//       {prop.text}
-//     </div>
-//   );
-// };
+function TempProducts() {
+  return (
+    <div>
+      <Product
+        src={"https://incidecoder-content.storage.googleapis.com/6a2ea6cb-3832-4d28-b6bd-12b724455ab7/products/ella-bache-balancing-serum-serum-antiase/ella-bache-balancing-serum-serum-antiase_front_photo_original.jpeg"}
+        title="Serum"
+        tags={['tag1', 'tag2', 'tag3']}
+      />
+    </div>
+  );
+};
 
 
 function Row() {
   return (
     <div className="grid grid-cols-3 gap-4 mb-4">
-      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
-      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-black"></p>
+      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <TempProducts />
+        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
-      <div className="h-[29rem] flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+      <div className="flex items-center justify-center h-64 rounded bg-gray-50 dark:bg-gray-800">
+        <TempProducts />
         <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
       </div>
     </div>
   );
 };
+
 
 
 export default function resultsPage() {
@@ -97,7 +98,6 @@ export default function resultsPage() {
         <div className="p-4 sm:ml-64">
           <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
             <div>
-
               <div id="Cleanser" style={{ backgroundColor: '#C8D5B9', padding: '1px', paddingLeft: '10px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Cleanser</h1>
               </div>
