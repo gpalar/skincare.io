@@ -26,15 +26,15 @@ function Row() {
     <div className="grid grid-cols-3 gap-4 mb-4">
       <div className="flex items-center justify-center h-64 rounded bg-white">
         <TempProducts />
-        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+        <p className="text-2xl text-gray-400"></p>
       </div>
       <div className="flex items-center justify-center h-64 rounded bg-white">
         <TempProducts />
-        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+        <p className="text-2xl text-gray-400 "></p>
       </div>
       <div className="flex items-center justify-center h-64 rounded bg-white">
         <TempProducts />
-        <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+        <p className="text-2xl text-gray-400"></p>
       </div>
     </div>
   );

@@ -34,14 +34,14 @@ export default function skinQuiz() {
         <>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <a href="../">
-                <img className="pl-6 py-6 h-28 w-64" src="skincare.io.png" />
+                <img className="pl-6 py-6 h-20 w-49" src="skincare.io.png" />
                 </a>
                 
             </div>
 
             <div className={styles.container}>
 
-                <div className="max-w-screen-lg mx-auto p-7 ">
+                <div className="max-w-screen-lg mx-auto p-7">
                     <div className="grid grid-rows-2 gap-20">
                         <div>
                             <h1 className="text-2xl">Choose your skin type</h1>
