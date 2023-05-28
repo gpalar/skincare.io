@@ -78,7 +78,7 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
-            background-color: #E6DDDE;
+            background-color: #F6EFEA;
         }
         * {
           box-sizing: border-box;

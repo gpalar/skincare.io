@@ -33,7 +33,10 @@ export default function skinQuiz() {
     return (
         <>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <a href="../">
                 <img className="pl-6 py-6 h-28 w-64" src="skincare.io.png" />
+                </a>
+                
             </div>
 
             <div className={styles.container}>
@@ -131,9 +134,13 @@ export default function skinQuiz() {
 
                 </div>
 
-                <button className="text-2xl text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                    <Link href={resultsPageURL}>View Results </Link>
-                </button>
+                <div className={styles.grid}>
+                    <a href="/resultsPage"
+                        className=''
+                    ><div className='w-32 p-2 bg-light-med-purple rounded-full border-2 border-light-med-purple text-center hover:border-2 hover:border-dark-purple'
+                    >VIEW RESULTS</div>
+                    </a>
+                </div>
 
                 <style jsx global>{`
                 html,
