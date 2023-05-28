@@ -9,8 +9,10 @@ interface skinbuttontype {
 }
 
 function SkinQuizBtn(props: skinbuttontype) {
+    const buttonColor = props.value ? 'baby-green' : 'pretty-blue';
+
     return (
-        <button onClick={() => props.setState(!props.value)} className="w-40 h-40 p-8 hover:bg-medium-tan text-black font-bold ">
+        <button onClick={() => props.setState(!props.value)} className="w-40 h-40 p-8 hover:bg-medium-tan text-black font-bold bg-{buttonColor}">
             {props.icon}
             {props.text}
         </button>
