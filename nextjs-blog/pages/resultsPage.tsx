@@ -1,20 +1,25 @@
 import 'flowbite'
 import React, { useRef } from 'react';
+import Select, { ActionMeta, OnChangeValue, StylesConfig } from 'react-select';
+import { ColourOption, colourOptions } from '../data';
 
 const navigation = [
   { name: 'Skincare.io', href: '/', current: false },
 ]
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const scrollToSection = (sectionId) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+
+// function Tag(prop) {
+//   return (
+//     <div className="px-3 py-1 bg-{prop.color} rounded-full" style={{backgroundColor: `${prop.color}`}}>
+//       {prop.text}
+//     </div>
+//   );
+// };
 
 
 function Row() {
