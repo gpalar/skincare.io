@@ -15,7 +15,7 @@ function Product(props: productinterface) {
             <div className="product_content">
                 <h3 className="product_title">{props.title}</h3>
                 <div className="product_tags">
-                    {props.tags && props.tags.map((tag, index) => (
+                    {props.tags && (props.tags).filter((x) => x != '').map((tag, index) => (
                         <span key={index} className="tag">{tag}</span>
                     ))}
                 </div>
