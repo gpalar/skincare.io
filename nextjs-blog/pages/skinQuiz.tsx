@@ -34,7 +34,7 @@ export default function skinQuiz() {
         <>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <a href="../">
-                <img className="pl-6 py-6 h-20 w-49" src="skincare.io.png" />
+                    <img className="pl-6 py-6 h-20 w-49" src="skincare.io.png" />
                 </a>
 
             </div>
@@ -51,7 +51,9 @@ export default function skinQuiz() {
                                         value={oily}
                                         setState={setOily}
                                         text="Oily"
-                                    // icon={RiCactusLine}
+                                        color="blue"
+                                        icon={'/rainDrop.png'}
+
                                     />
 
                                 </div>
@@ -60,7 +62,8 @@ export default function skinQuiz() {
                                         value={dry}
                                         setState={setDry}
                                         text="Dry"
-                                    // icon={RiCactusLine}
+                                        color="purple"
+                                        icon={'/cactus.png'}
                                     />
                                 </div>
                                 <div className="bg-light-tan">
@@ -68,7 +71,8 @@ export default function skinQuiz() {
                                         value={sensitive}
                                         setState={setSensitive}
                                         text="Sensitive"
-                                       // icon={RiCactusLine}
+                                        color="purple"
+                                        icon={'/sensitive.png'}
                                     />
                                 </div>
 
@@ -86,7 +90,8 @@ export default function skinQuiz() {
                                         value={acne}
                                         setState={setAcne}
                                         text="Acne"
-                                    // icon={RiCactusLine}
+                                        color="blue"
+                                        icon={'/acne.png'}
                                     />
                                 </div>
 
@@ -95,7 +100,8 @@ export default function skinQuiz() {
                                         value={antiAging}
                                         setState={setAntiAging}
                                         text="Anti-Aging"
-                                    // icon={RiCactusLine}
+                                        color="purple"
+                                        icon={'/serum.png'}
                                     />
                                 </div>
 
@@ -104,7 +110,8 @@ export default function skinQuiz() {
                                         value={brightening}
                                         setState={setBrightening}
                                         text="Brightening"
-                                    // icon={RiCactusLine}
+                                        color="purple"
+                                        icon={'/shiney.png'}
                                     />
                                 </div>
 
@@ -113,7 +120,8 @@ export default function skinQuiz() {
                                         value={uv}
                                         setState={setUv}
                                         text="UV"
-                                    // icon={RiCactusLine}
+                                        color="purple"
+                                        icon={'/sun.png'}
                                     />
                                 </div>
 
