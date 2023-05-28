@@ -21,6 +21,12 @@ function Product(props: productinterface) {
                 </div>
             </div>
         </div>
+
+        // {tags.map((props.tag) => (
+        //     <div className='flex flex-row'>
+        //     <Tag name={props.tag} />
+        //     </div>
+        // ))}
     );
 };
 
