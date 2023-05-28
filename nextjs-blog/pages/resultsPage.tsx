@@ -41,6 +41,53 @@ function Row() {
 
 
 export default function resultsPage() {
+
+  const [results, setResults] = React.useState({})
+
+  // initialize request body
+  var reqBody = {
+    "cleanser": true,
+    "toner": true,
+    "serum": true,
+    "moisturizer": true,
+    "sunscreen": true,
+    "dry": 0,
+    "oily": 0,
+    "sensitive": 0,
+    "acne_fighting": 0,
+    "anti_aging": 0,
+    "brightening": 0,
+    "uv": 0
+  }
+
+  // grab selected quiz options from parameters
+  if (typeof window != 'undefined') {
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    reqBody.dry = urlParams.get('dry') ? 1 : 0
+    reqBody.oily = urlParams.get('oily') ? 1 : 0
+    reqBody.sensitive = urlParams.get('sensitive') ? 1 : 0
+    reqBody.acne_fighting = urlParams.get('acne') ? 1 : 0
+    reqBody.anti_aging = urlParams.get('antiAging') ? 1 : 0
+    reqBody.brightening = urlParams.get('brightening') ? 1 : 0
+    reqBody.uv = urlParams.get('uv') ? 1 : 0
+  }
+
+  React.useEffect(() => {
+  
+      fetch("http://localhost:3001/products/recommended", {
+        method: 'POST',
+        body: JSON.stringify(reqBody),
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      .then((res) => res.json())
+      .then((data) => setResults(data?.productRecs))
+    }, [])
+
   return (
     <>
       <>
