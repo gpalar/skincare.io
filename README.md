@@ -1,4 +1,4 @@
-## :sparkles: skincare.io :sparkles: : a simple, intuitive, and free solution for those seeking personalized skincare routines in a timely manner
+## skincare.io🧴: a simple, intuitive, and free solution for those seeking personalized skincare routines in a timely manner
 
 ## :wave: read more [here](https://devpost.com/software/skincare-io)
 ## 👀 watch our demo!
